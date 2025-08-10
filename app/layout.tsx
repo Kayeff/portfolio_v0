@@ -18,7 +18,9 @@ export default function RootLayout({
       <body
         className={`${geistMono.className} antialiased scroll-smooth bg-background text-foreground`}
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        <main className="w-full min-h-screen flex">
+          <ThemeProvider>{children}</ThemeProvider>
+        </main>
       </body>
     </html>
   );

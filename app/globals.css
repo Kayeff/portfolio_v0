@@ -10,13 +10,13 @@
 }
 
 [data-theme="dark"] {
-  --background: #171717;
+  --background: black;
   --foreground: #a9cecf;
 }
 
 [data-theme="light"] {
   --background: #a9cecf;
-  --foreground: #171717;
+  --foreground: black;
 }
 
 .no-scrollbar::-webkit-scrollbar {

@@ -2,22 +2,25 @@ import { experienceData, socials, techstack } from "@/constants/data";
 import Para from "./Para";
 import { ArrowUpRight, Send } from "lucide-react";
 import { right } from "@/constants/content";
+import Section from "./Section";
 
 export default function Right() {
   return (
-    <div className="w-[62%] text-foreground fixed right-0 top-0">
-      <div className="h-screen overflow-y-auto w-full flex flex-col gap-40 p-20 no-scrollbar">
-        <div className="w-full flex flex-col gap-2">
-          <h1 className="uppercase text-sm">{right.about.heading}</h1>
+    <div className="w-[62%] text-foreground">
+      <div className="h-screen overflow-y-auto w-full flex flex-col no-scrollbar">
+        {/* About */}
+        <Section heading={right.about.heading}>
           <Para para={right.about.para} />
-        </div>
-        <div className="w-full flex flex-col gap-2">
-          <h1 className="uppercase text-sm">{right.projects.heading}</h1>
+        </Section>
+
+        {/* Projects */}
+        <Section heading={right.projects.heading}>
           <p>{right.projects.para}</p>
-        </div>
-        <div className="w-full flex flex-col gap-2">
-          <h1 className="uppercase text-sm">{right.experience.heading}</h1>
-          <div className="w-full flex flex-col">
+        </Section>
+
+        {/* Experience */}
+        <Section heading={right.experience.heading}>
+          <ul className="w-full flex flex-col">
             {experienceData.map((data) => (
               <li className="w-full grid grid-cols-[40%_60%]" key={data.id}>
                 <p>{data.timeline}</p>
@@ -52,10 +55,11 @@ export default function Right() {
                 </div>
               </li>
             ))}
-          </div>
-        </div>
-        <div className="w-full flex flex-col gap-2">
-          <h1 className="uppercase text-sm">{right.techstack.heading}</h1>
+          </ul>
+        </Section>
+
+        {/* Tech Stack */}
+        <Section heading={right.techstack.heading}>
           <ul className="w-full grid grid-cols-2 gap-2">
             {techstack.map((skill) => (
               <li
@@ -68,9 +72,10 @@ export default function Right() {
               </li>
             ))}
           </ul>
-        </div>
-        <div className="w-full flex flex-col gap-2">
-          <h1 className="uppercase text-sm">{right.contact.heading}</h1>
+        </Section>
+
+        {/* Contact */}
+        <Section heading={right.contact.heading}>
           <form action="" className="w-full grid grid-cols-2 gap-2">
             <div className="w-full">
               <input
@@ -100,13 +105,14 @@ export default function Right() {
               <Send size={20} strokeWidth={1.5} />
             </button>
           </form>
-        </div>
-        <div className="w-full flex flex-col gap-2">
-          <h1 className="uppercase text-sm">{right.elsewhere.heading}</h1>
+        </Section>
+
+        {/* Elsewhere */}
+        <Section heading={right.elsewhere.heading}>
           <ul className="w-full flex items-center justify-between">
             {socials.map((item) => (
               <li
-                className="w-full border border-foreground p-2 py-1 hover:bg-foreground hover:text-background cursor-pointer duration-200"
+                className="w-full p-2 py-1 hover:bg-foreground hover:text-background cursor-pointer duration-200"
                 key={item.type}
               >
                 <a
@@ -122,7 +128,7 @@ export default function Right() {
               </li>
             ))}
           </ul>
-        </div>
+        </Section>
       </div>
     </div>
   );
