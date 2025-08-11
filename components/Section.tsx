@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { SectionProps } from "@/types/types";
 
 export default function Section({ heading, children }: SectionProps) {
   return (
@@ -8,8 +8,3 @@ export default function Section({ heading, children }: SectionProps) {
     </section>
   );
 }
-
-type SectionProps = {
-  heading: string;
-  children: ReactNode;
-};

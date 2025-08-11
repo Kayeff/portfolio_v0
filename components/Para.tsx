@@ -2,12 +2,9 @@ import gsap from "gsap";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/SplitText";
+import { ParaProps } from "@/types/types";
 
 gsap.registerPlugin(SplitText);
-
-type ParaProps = {
-  para: string;
-};
 
 export default function Para({ para }: ParaProps) {
   const containerRef = useRef(null);

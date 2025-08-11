@@ -1,8 +1,10 @@
 import { experienceData, socials, techstack } from "@/constants/data";
-import Para from "./Para";
+import dynamic from "next/dynamic";
 import { ArrowUpRight, Send } from "lucide-react";
 import { right } from "@/constants/content";
 import Section from "./Section";
+import SpanText from "./SpanText";
+const Para = dynamic(() => import("./Para"), { ssr: false });
 
 export default function Right() {
   return (
@@ -112,7 +114,7 @@ export default function Right() {
           <ul className="w-full flex items-center justify-between">
             {socials.map((item) => (
               <li
-                className="w-full p-2 py-1 hover:bg-foreground hover:text-background cursor-pointer duration-200"
+                className="w-full px-1 hover:bg-foreground hover:text-background cursor-pointer duration-200 group"
                 key={item.type}
               >
                 <a
@@ -121,13 +123,22 @@ export default function Right() {
                   className="tracking-tight text-sm font-medium flex items-center gap-0.5"
                 >
                   <span>{item.type}</span>
-                  <span>
+                  <span className="">
                     <ArrowUpRight size={15} />
                   </span>
                 </a>
               </li>
             ))}
           </ul>
+        </Section>
+
+        <Section>
+          <p className="tracking-tight text-foreground/75">
+            This website is built with <SpanText text="Next JS" />, written in{" "}
+            <SpanText text="TypeScript" />. Styled using{" "}
+            <SpanText text="Tailwind CSS" /> with a touch of subtle animations
+            using <SpanText text="GSAP" />.
+          </p>
         </Section>
       </div>
     </div>
