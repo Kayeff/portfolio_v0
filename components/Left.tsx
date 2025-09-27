@@ -2,7 +2,8 @@ import { geistSans } from "@/fonts/fonts";
 import Para from "./Para";
 import ThemeSelect from "./ThemeSelect";
 import { left } from "@/constants/content";
-import { Copyright } from "lucide-react";
+import { Braces, Copyright } from "lucide-react";
+import CurrentDate from "./CurrentDate";
 
 export default function Left() {
   return (
@@ -12,7 +13,7 @@ export default function Left() {
           <h1 className="text-4xl tracking-tighter flex items-center gap-2.5">
             {left.name}
           </h1>
-          <p className={`${geistSans.className} text-sm`}>{left.role}</p>
+          <CurrentDate />
         </div>
         <Para para={left.briefPara} />
       </div>

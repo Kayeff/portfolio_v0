@@ -8,7 +8,7 @@ const Section = memo(function Section({ heading, children }: SectionProps) {
     <motion.section
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 1, ease: "easeInOut" }}
+      transition={{ duration: 0.7, ease: "easeInOut" }}
       viewport={{ once: true }}
       className="w-full flex flex-col gap-2.5 p-20"
     >

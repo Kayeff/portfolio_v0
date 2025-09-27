@@ -11,7 +11,10 @@ type SectionProps = {
 
 type SpanTextProps = {
   text: string;
+  href: string;
 };
+
+type HowcanihelpuT = { id: string; title: string; icon: string }[];
 
 type ParaProps = {
   para: string;
@@ -37,4 +40,5 @@ export type {
   ParaProps,
   ExperienceDataT,
   ExperienceObj,
+  HowcanihelpuT,
 };

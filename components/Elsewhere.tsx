@@ -10,7 +10,7 @@ export default function Elsewhere() {
       <ul className="w-full grid grid-cols-4 gap-2">
         {socials.map((item) => (
           <li
-            className="w-full px-1 hover:bg-foreground hover:text-background cursor-pointer duration-200 group"
+            className="w-full px-1 hover:bg-foreground border border-foreground hover:text-background cursor-pointer duration-200 group"
             key={item.type}
           >
             <a

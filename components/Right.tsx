@@ -5,6 +5,7 @@ import Elsewhere from "./Elsewhere";
 import FooterPara from "./FooterPara";
 import About from "./About";
 import Project from "./Project";
+import WhatICanDoForYou from "./WhatICanDoForYou";
 
 export default function Right() {
   return (
@@ -12,22 +13,17 @@ export default function Right() {
       <div className="h-screen overflow-y-auto w-full flex flex-col">
         {/* About */}
         <About />
-
+        <WhatICanDoForYou />
         {/* Projects */}
         <Project />
-
         {/* Experience */}
         <Experience />
-
         {/* Tech Stack */}
         <TechStack />
-
         {/* Contact */}
         <ContactForm />
-
         {/* Elsewhere */}
         <Elsewhere />
-
         <FooterPara />
       </div>
     </div>

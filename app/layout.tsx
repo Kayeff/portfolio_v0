@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { geistMono } from "@/fonts/fonts";
 import { ThemeProvider } from "next-themes";
+import LoadingAnimation from "@/components/LoadingAnimation";
 
 export const metadata: Metadata = {
   title: "Portfolio by Kaif",
@@ -18,9 +19,11 @@ export default function RootLayout({
       <body
         className={`${geistMono.className} antialiased scroll-smooth bg-background text-foreground`}
       >
-        <main className="w-full min-h-screen flex">
-          <ThemeProvider>{children}</ThemeProvider>
-        </main>
+        <LoadingAnimation>
+          <main className="w-full min-h-screen flex">
+            <ThemeProvider>{children}</ThemeProvider>
+          </main>
+        </LoadingAnimation>
       </body>
     </html>
   );

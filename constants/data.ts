@@ -1,3 +1,13 @@
+import {
+  BrushCleaning,
+  Cable,
+  ChevronsLeftRightEllipsis,
+  CircleFadingArrowUp,
+  LayoutPanelTop,
+  PanelTop,
+  Pen,
+} from "lucide-react";
+
 const experienceData = [
   {
     id: "corenettech",
@@ -47,6 +57,15 @@ const techstack = [
   "Python",
 ];
 
+const howcanihelpu = [
+  { id: "work1", title: "Improve your website", icon: CircleFadingArrowUp },
+  { id: "work2", title: "Create a new website", icon: PanelTop },
+  { id: "work3", title: "Refractor UI", icon: LayoutPanelTop },
+  { id: "work4", title: "Create a web app", icon: ChevronsLeftRightEllipsis },
+  { id: "work5", title: "Optimize Performance", icon: Cable },
+  { id: "work6", title: "Add animations", icon: BrushCleaning },
+];
+
 const socials = [
   { type: "Github", link: "https://github.com/Kayeff" },
   {
@@ -57,4 +76,4 @@ const socials = [
   { type: "Instagram", link: "https://www.instagram.com/kayfsaiyed/?__pwa=1" },
 ];
 
-export { experienceData, sections, techstack, socials };
+export { experienceData, sections, techstack, socials, howcanihelpu };
