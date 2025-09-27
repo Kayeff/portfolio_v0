@@ -9,7 +9,9 @@ export default function Left() {
     <div className="text-foreground p-20 flex flex-col justify-between gap-20 w-[38%] h-screen">
       <div className="w-full flex flex-col gap-5">
         <div className="w-full flex flex-col gap-1">
-          <h1 className="text-4xl tracking-tighter">{left.name}</h1>
+          <h1 className="text-4xl tracking-tighter flex items-center gap-2.5">
+            {left.name}
+          </h1>
           <p className={`${geistSans.className} text-sm`}>{left.role}</p>
         </div>
         <Para para={left.briefPara} />

@@ -3,9 +3,9 @@ import { twMerge } from "tailwind-merge";
 
 export default function OverlayGradient({ className }: WrapperComponentProps) {
   return (
-    <div
+    <span
       className={twMerge(
-        "fixed from-transparent to-background z-10 pointer-events-none",
+        "fixed from-transparent to-background z-10 pointer-events-none inline-block",
         className
       )}
     />

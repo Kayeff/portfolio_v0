@@ -1,10 +1,21 @@
+"use client";
 import { SectionProps } from "@/types/types";
+import { motion } from "motion/react";
+import { memo } from "react";
 
-export default function Section({ heading, children }: SectionProps) {
+const Section = memo(function Section({ heading, children }: SectionProps) {
   return (
-    <section className="w-full flex flex-col gap-4 p-20">
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1, ease: "easeInOut" }}
+      viewport={{ once: true }}
+      className="w-full flex flex-col gap-2.5 p-20"
+    >
       <h1 className="uppercase text-sm">{heading}</h1>
       {children}
-    </section>
+    </motion.section>
   );
-}
+});
+
+export default Section;
