@@ -2,12 +2,11 @@ import { socials } from "@/constants/data";
 import { ArrowUpRight } from "lucide-react";
 import React from "react";
 import Section from "./Section";
-import { right } from "@/constants/content";
 
 export default function Elsewhere() {
   return (
-    <Section heading={right.elsewhere.heading}>
-      <ul className="w-full grid grid-cols-4 gap-2">
+    <Section>
+      <ul className="w-full grid grid-cols-1 sm:max-md:grid-cols-2 md:grid-cols-4 lg:grid-cols-2 gap-1">
         {socials.map((item) => (
           <li
             className="w-full px-1 hover:bg-foreground border border-foreground hover:text-background cursor-pointer duration-200 group"

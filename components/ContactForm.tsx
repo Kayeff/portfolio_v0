@@ -5,7 +5,7 @@ import { right } from "@/constants/content";
 export default function ContactForm() {
   return (
     <Section heading={right.contact.heading}>
-      <form className="w-full grid grid-cols-2 gap-2">
+      <form className="w-full grid grid-cols-1 lg:grid-cols-2 gap-2">
         <div className="w-full">
           <input
             type="text"
@@ -20,7 +20,7 @@ export default function ContactForm() {
             placeholder="email"
           />
         </div>
-        <div className="w-full col-span-2">
+        <div className="w-full lg:col-span-2">
           <textarea
             name="message"
             id="message"
@@ -28,7 +28,7 @@ export default function ContactForm() {
             placeholder="message"
           />
         </div>
-        <button className="w-max duration-200 text-background py-2 px-10 cursor-pointer col-span-2 bg-foreground font-medium">
+        <button className="w-max duration-200 text-background py-2 px-10 cursor-pointer bg-foreground font-medium lg:col-span-2">
           <Send size={20} strokeWidth={1.5} />
         </button>
       </form>

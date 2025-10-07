@@ -2,7 +2,7 @@ import { ExperienceObj } from "@/types/types";
 
 export default function ExperienceList({ data }: { data: ExperienceObj }) {
   return (
-    <li className="w-full grid grid-cols-[40%_60%]">
+    <li className="w-full grid grid-cols-1 lg:grid-cols-[38%_62%] gap-2">
       <p>{data.timeline}</p>
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-1">

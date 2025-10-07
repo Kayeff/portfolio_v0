@@ -1,11 +1,10 @@
-import React from "react";
 import SpanText from "./SpanText";
 import Section from "./Section";
 
 export default function FooterPara() {
   return (
     <Section>
-      <p className="tracking-tight text-foreground/75">
+      <p className="tracking-tight text-foreground/75 text-sm md:text-base">
         This website is built with{" "}
         <SpanText href="https://nextjs.org/" text="Next JS" />, written in{" "}
         <SpanText href="https://www.typescriptlang.org/" text="TypeScript" />.

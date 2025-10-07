@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { geistMono } from "@/fonts/fonts";
+import { geistMono, geistSans } from "@/fonts/fonts";
 import { ThemeProvider } from "next-themes";
 import LoadingAnimation from "@/components/LoadingAnimation";
 
@@ -17,7 +17,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistMono.className} antialiased scroll-smooth bg-background text-foreground`}
+        className={`${geistMono.className} ${geistSans.variable} antialiased scroll-smooth bg-background text-foreground`}
+        suppressHydrationWarning
       >
         <LoadingAnimation>
           <main className="w-full min-h-screen flex">

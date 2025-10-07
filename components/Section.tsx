@@ -10,9 +10,11 @@ const Section = memo(function Section({ heading, children }: SectionProps) {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.7, ease: "easeInOut" }}
       viewport={{ once: true }}
-      className="w-full flex flex-col gap-2.5 p-20"
+      className="w-full flex flex-col gap-2.5"
     >
-      <h1 className="uppercase text-sm">{heading}</h1>
+      <h1 className="uppercase text-sm text-balance font-medium text-foreground/90 tracking-tight lg:text-base font-sans">
+        {heading}
+      </h1>
       {children}
     </motion.section>
   );

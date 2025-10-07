@@ -1,6 +1,7 @@
 "use client";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import { Sun, Moon } from "lucide-react";
 
 export default function ThemeSelect() {
   const { theme, setTheme } = useTheme();
@@ -19,8 +20,11 @@ export default function ThemeSelect() {
   }
 
   return (
-    <button onClick={toggleTheme} className="cursor-pointer">
-      theme: {theme}
+    <button
+      onClick={toggleTheme}
+      className="cursor-pointer p-1.5 hover:bg-foreground/5 rounded-full"
+    >
+      {theme === "light" ? <Moon /> : <Sun />}
     </button>
   );
 }

@@ -7,11 +7,11 @@ import { BadgeCheck } from "lucide-react";
 export default function WhatICanDoForYou() {
   return (
     <Section heading={right.whaticandoforu.heading}>
-      <ul className="w-full grid grid-cols-2 gap-2">
+      <ul className="w-full grid grid-cols-1 lg:grid-cols-2 gap-2">
         {howcanihelpu.map((item) => (
           <li
             key={item.id}
-            className="px-1 flex items-center justify-between gap-2 duration-300 group cursor-default hover:bg-foreground hover:text-background hover:px-2"
+            className="px-1 flex items-center justify-between gap-2 group cursor-default hover:bg-foreground hover:text-background hover:px-2 transition-all duration-300"
           >
             <div className="flex items-center gap-2">
               <BadgeCheck size={20} />

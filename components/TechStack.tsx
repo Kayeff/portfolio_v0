@@ -7,7 +7,7 @@ import StackList from "./StackList";
 export default function TechStack() {
   return (
     <Section heading={right.techstack.heading}>
-      <ul className="w-full grid grid-cols-3 gap-2">
+      <ul className="w-full grid grid-cols-1 lg:grid-cols-3 gap-2">
         {techstack.map((skill) => (
           <StackList key={skill} skill={skill} />
         ))}
