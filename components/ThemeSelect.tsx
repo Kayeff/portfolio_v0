@@ -1,30 +1,58 @@
 "use client";
-import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { Sun, Moon } from "lucide-react";
+import { Settings } from "lucide-react";
+import { AnimatePresence } from "motion/react";
+import ThemeOptions from "./ThemeOptions";
+import { twMerge } from "tailwind-merge";
 
 export default function ThemeSelect() {
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const [theme, setTheme] = useState<string>("light");
+  const [open, setOpen] = useState(false);
 
-  function toggleTheme() {
-    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+  useEffect(() => {
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)")
+      .matches
+      ? "red"
+      : "light";
+
+    const savedTheme = prefersDark || localStorage.getItem("theme");
+    setTheme(savedTheme);
+  }, []);
+
+  function toggleOptions() {
+    setOpen((prev) => !prev);
+  }
+
+  function handleThemeChange(color: string) {
+    setTheme(color);
+    setOpen(false);
   }
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
-  }
+    const elem = document.documentElement;
+    elem.classList.remove("red", "light", "blue");
+    elem.classList.add(theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   return (
-    <button
-      onClick={toggleTheme}
-      className="cursor-pointer p-1.5 hover:bg-foreground/5 rounded-full"
-    >
-      {theme === "light" ? <Moon /> : <Sun />}
-    </button>
+    <div className="flex items-center gap-2 overflow-clip relative">
+      <AnimatePresence>
+        {open && <ThemeOptions handleClick={handleThemeChange} theme={theme} />}
+      </AnimatePresence>
+      <button
+        onClick={toggleOptions}
+        className="cursor-pointer flex items-center justify-center p-1.5 rounded-full relative z-10 bg-background border border-foreground/50"
+      >
+        <span
+          className={twMerge(
+            "inline-block duration-200",
+            open ? "-rotate-90" : "rotate-0"
+          )}
+        >
+          <Settings />
+        </span>
+      </button>
+    </div>
   );
 }

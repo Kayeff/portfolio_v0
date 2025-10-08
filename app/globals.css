@@ -1,31 +1,35 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+:root {
+  --tron-blue: #92fdfe;
+  --tron-red: #f52000;
+  --whyte: #fdfdfb;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-giants-orange: #ff521b;
+  --color-tron-red: var(--tron-red);
+  --color-tron-blue: var(--tron-blue);
+  --color-whyte: var(--whyte);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-[data-theme="dark"] {
+.red {
   --background: black;
-  --foreground: var(--color-giants-orange);
+  --foreground: var(--tron-red);
 }
 
-[data-theme="light"] {
-  --background: #ff521b;
+.blue {
+  --background: black;
+  --foreground: var(--tron-blue);
+}
+
+.light {
+  --background: var(--whyte);
   --foreground: black;
-}
-
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 body::selection {
