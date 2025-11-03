@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistMono.variable} antialiased scroll-smooth bg-background text-foreground [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-background [&::-webkit-scrollbar-thumb]:bg-foreground dark:[&::-webkit-scrollbar-track]:bg-background dark:[&::-webkit-scrollbar-thumb]:bg-foreground`}
+        className={`${geistMono.variable} ${geistSans.className} antialiased scroll-smooth bg-background text-foreground [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-background [&::-webkit-scrollbar-thumb]:bg-foreground dark:[&::-webkit-scrollbar-track]:bg-background dark:[&::-webkit-scrollbar-thumb]:bg-foreground`}
         suppressHydrationWarning
       >
         <LoadingAnimation>
