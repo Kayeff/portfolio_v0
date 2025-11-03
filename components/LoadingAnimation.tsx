@@ -7,7 +7,7 @@ export default function LoadingAnimation({
 }: {
   children: ReactNode;
 }) {
-  const [isLoaded, setIsLoaded] = useState<Boolean>(false);
+  const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
   useEffect(() => {
     setIsLoaded(true);
