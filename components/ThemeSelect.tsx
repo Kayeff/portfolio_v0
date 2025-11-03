@@ -15,7 +15,7 @@ export default function ThemeSelect() {
       ? "red"
       : "light";
 
-    const savedTheme = prefersDark || localStorage.getItem("theme");
+    const savedTheme = localStorage.getItem("theme") || prefersDark;
     setTheme(savedTheme);
   }, []);
 
@@ -30,19 +30,19 @@ export default function ThemeSelect() {
 
   useEffect(() => {
     const elem = document.documentElement;
-    elem.classList.remove("red", "light", "blue");
+    elem.classList.remove("red", "light", "blue", "grey", "yellow");
     elem.classList.add(theme);
     localStorage.setItem("theme", theme);
   }, [theme]);
 
   return (
-    <div className="flex items-center gap-2 overflow-clip relative">
+    <div className="flex items-center gap-2 relative">
       <AnimatePresence>
         {open && <ThemeOptions handleClick={handleThemeChange} theme={theme} />}
       </AnimatePresence>
       <button
         onClick={toggleOptions}
-        className="cursor-pointer flex items-center justify-center p-1.5 rounded-full relative z-10 bg-background border border-foreground/50"
+        className="cursor-pointer flex items-center justify-center p-1.5 rounded-full relative z-10 bg-background border hover:border-foreground/20 border-transparent"
       >
         <span
           className={twMerge(

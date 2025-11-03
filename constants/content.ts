@@ -1,7 +1,7 @@
 const left = {
   name: "Kaif Saiyed",
   briefPara:
-    "A Front-end developer creating rectangles for the modern web. Passionate about learning new things. Little late for the party, but will eventually reach somewhere!",
+    "A Front-end developer creating rectangles for the modern web. Passionate about learning new things. Currently exploring the world of backend using Node JS.",
   footer: {
     copyright: "2025 Portfolio",
   },
@@ -24,6 +24,9 @@ const right = {
   },
   techstack: {
     heading: "tech stack",
+  },
+  tools: {
+    heading: "tools",
   },
   contact: {
     heading: "contact me",

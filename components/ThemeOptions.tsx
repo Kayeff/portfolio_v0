@@ -16,11 +16,16 @@ export default function ThemeOptions({ handleClick, theme }: ThemeOptionsT) {
       transition={{ duration: 0.4, ease: "easeInOut" }}
       className="bg-background flex items-center justify-center border border-foreground/50 relative z-[9]"
     >
-      <ul className="grid grid-cols-3">
+      <ul className="grid grid-cols-4">
         <ThemeColorButton
           handleClick={handleClick}
           color="red"
           isActive={theme === "red"}
+        />
+        <ThemeColorButton
+          handleClick={handleClick}
+          color="green"
+          isActive={theme === "green"}
         />
         <ThemeColorButton
           handleClick={handleClick}

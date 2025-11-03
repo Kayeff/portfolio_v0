@@ -2,9 +2,13 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --tron-blue: #92fdfe;
-  --tron-red: #f52000;
+  --tron-blue: #48bfe3;
+  --tron-red: #fe0807;
+  --tron-yellow: #f4af2d;
   --whyte: #fdfdfb;
+  --green: #4af626;
+  --blackk: #030504;
+  --grey: #d5c8b3;
 }
 
 @theme inline {
@@ -12,24 +16,32 @@
   --color-foreground: var(--foreground);
   --color-tron-red: var(--tron-red);
   --color-tron-blue: var(--tron-blue);
+  --color-tron-yellow: var(--tron-yellow);
   --color-whyte: var(--whyte);
+  --color-grey: var(--grey);
+  --color-green: var(--green);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
+.green {
+  --background: var(--blackk);
+  --foreground: var(--green);
+}
+
 .red {
-  --background: black;
+  --background: var(--blackk);
   --foreground: var(--tron-red);
 }
 
 .blue {
-  --background: black;
+  --background: var(--blackk);
   --foreground: var(--tron-blue);
 }
 
 .light {
   --background: var(--whyte);
-  --foreground: black;
+  --foreground: var(--blackk);
 }
 
 body::selection {

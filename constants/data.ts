@@ -5,7 +5,6 @@ import {
   CircleFadingArrowUp,
   LayoutPanelTop,
   PanelTop,
-  Pen,
 } from "lucide-react";
 
 const experienceData = [
@@ -39,6 +38,8 @@ const sections = [
   { id: "contact", title: "/contact" },
 ];
 
+const tools = ["VS Code", "GitHub", "Lenis Smooth Scroll", "Lucide"];
+
 const techstack = [
   "HTML",
   "CSS",
@@ -46,14 +47,14 @@ const techstack = [
   "Tailwind CSS",
   "React JS",
   "React Router",
-  "Redux",
+  "Redux JS",
+  "Jest",
+  "React Testing Library",
   "Tanstack Query",
   "Next JS",
   "TypeScript",
   "Framer Motion",
-  "GSAP",
   "Git",
-  "GitHub",
   "Python",
 ];
 
@@ -76,4 +77,4 @@ const socials = [
   { type: "Instagram", link: "https://www.instagram.com/kayfsaiyed/?__pwa=1" },
 ];
 
-export { experienceData, sections, techstack, socials, howcanihelpu };
+export { experienceData, sections, techstack, socials, howcanihelpu, tools };
