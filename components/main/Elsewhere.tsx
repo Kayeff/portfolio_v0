@@ -1,7 +1,6 @@
 import { socials } from "@/constants/data";
 import { ArrowUpRight } from "lucide-react";
-import React from "react";
-import Section from "./Section";
+import Section from "../common/Section";
 
 export default function Elsewhere() {
   return (

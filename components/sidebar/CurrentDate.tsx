@@ -19,15 +19,15 @@ export default function CurrentDate() {
   if (!currentDate) return;
 
   return (
-    <div className="w-max flex items-center gap-2 bg-foreground text-background px-2 text-sm md:text-base">
+    <div className="w-max px-2 gap-1 flex items-center bg-foreground text-background text-sm md:text-base">
       <p className={`font-medium ${geistSans.className}`}>
         {moment().format("Do MMM YYYY")}
       </p>
-      <p className="h-full w-1 bg-background" />
+      <p className="h-full bg-background" />
       <p className={`font-medium ${geistSans.className}`}>
         {moment().format("dddd")}
       </p>
-      <p className="h-full w-1 bg-background" />
+      <p className="h-full bg-background" />
       <p className="font-medium">{currentDate}</p>
     </div>
   );

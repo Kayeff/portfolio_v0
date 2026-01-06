@@ -5,7 +5,7 @@ import { memo } from "react";
 
 const Section = memo(function Section({ heading, children }: SectionProps) {
   return (
-    <motion.section
+    <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.7, ease: "easeInOut" }}
@@ -16,7 +16,7 @@ const Section = memo(function Section({ heading, children }: SectionProps) {
         {heading}
       </h1>
       {children}
-    </motion.section>
+    </motion.div>
   );
 });
 

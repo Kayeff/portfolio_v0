@@ -1,5 +1,5 @@
-import SpanText from "./SpanText";
-import Section from "./Section";
+import SpanText from "../common/SpanText";
+import Section from "../common/Section";
 
 export default function FooterPara() {
   return (

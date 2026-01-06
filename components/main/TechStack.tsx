@@ -1,6 +1,6 @@
 import { techstack, tools } from "@/constants/data";
 import React from "react";
-import Section from "./Section";
+import Section from "../common/Section";
 import { right } from "@/constants/content";
 import StackList from "./StackList";
 

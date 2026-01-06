@@ -1,5 +1,5 @@
-import Section from "./Section";
-import Para from "./Para";
+import Section from "../common/Section";
+import Para from "../common/Para";
 import { right } from "@/constants/content";
 
 export default function About() {

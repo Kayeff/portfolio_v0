@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { geistMono, geistSans } from "@/fonts/fonts";
-import LoadingAnimation from "@/components/LoadingAnimation";
+import LoadingAnimation from "@/components/animation/LoadingAnimation";
 
 export const metadata: Metadata = {
   title: "Portfolio by Kaif",

@@ -1,4 +1,4 @@
-import Section from "./Section";
+import Section from "../common/Section";
 import { right } from "@/constants/content";
 
 export default function Project() {

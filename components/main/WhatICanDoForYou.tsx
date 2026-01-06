@@ -1,6 +1,5 @@
 import { right } from "@/constants/content";
-import Section from "./Section";
-import React from "react";
+import Section from "../common/Section";
 import { howcanihelpu } from "@/constants/data";
 import { BadgeCheck } from "lucide-react";
 
