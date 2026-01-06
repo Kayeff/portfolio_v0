@@ -1,5 +1,5 @@
 import { config } from "dotenv";
 
-config({ path: `.env.${process.env.NODE_ENV || "development"}.local` });
+config({ path: `.env.local` });
 
 export const { RESEND_EMAIL_API_KEY } = process.env;
